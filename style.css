@@ -23,7 +23,7 @@ h1 {
     font-family: 'Norse-Bold', sans-serif;
 }
 
-h2 {
+h2, h3 {
     font-family: sans-serif;
 }
 
@@ -56,18 +56,80 @@ h2 {
 }
 
 .first {
-    height: 40vh;
+    height: 30vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     margin-left: 5%;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
+}
+
+
+/* Form section */
+.form-main-div {
+    height: 35vh;
+    background-color: white;
+}
+
+.form-title {
+    margin-top: 15px;
+    margin-left: 5%;
+    margin-bottom: 15px;
 }
 
 .second {
-    height: 30vh;
+    display: flex;
+    font-family: sans-serif;
+    margin-left: 5%;
+    gap: 70px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    border: 2px solid #e5e7eb;
+    border-radius: 7px;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+label {
+    color: #585858;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#error {
+    color: red;
+    font-size: 10px;
+    margin: 4px;
+}
+
+.btn-green {
+    background-color: #596d48;
+    color: white;
+    border: 1px solid #596d48;
+    border-radius: 7px;
+    height: 50px;
+    width: 175px;
+    margin-top: 3%;
+    margin-left: 5%;
+    font-size: 17px;
 }
 
 .third {
     height: 30vh;
+    background-color: #fafafa;
 }
