@@ -1,135 +1,192 @@
 @font-face {
-    font-family: Norse-Bold;
-    src: url('./fonts/norse.bold.otf');
+  font-family: Norse-Bold;
+  src: url('./fonts/norse.bold.otf');
 }
 
-
-/* Overwriting the default values */
+/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-} 
+  scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    padding: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
-h1 {
-    font-family: 'Norse-Bold', sans-serif;
-}
-
-h2, h3 {
-    font-family: sans-serif;
-}
-
-/* Main */
+/* Layout */
 .main {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
-
-/* Left section */
+/* Left panel */
 .left {
-    background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg');
-    width: 35vw;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 35%;
+  background-image: url('./images/halie-west-25xggax4bSA-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.left h1 {
+  font-family: 'Norse-Bold', sans-serif;
+  font-size: 6rem;
+}
+
+.logo-section {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.transparent-section {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logo-section img {
+    width: 90px;
+    height: 120px;
+}
+
+.credit-section {
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+
+.credit-section a {
     color: white;
 }
 
 
 
-/* Right section */
+/* Right panel */
 .right {
-    display: flex;
-    flex-direction: column;
-    background-color: #fafafa;
-    width: 65vw;
+  width: 65%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 40px; */
 }
 
-.first {
-    height: 30vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-left: 5%;
-    margin-bottom: 5%;
+/* Intro text */
+.intro-text {
+  margin-bottom: 40px;
+  margin-left: 40px;
 }
 
+.intro-text h2 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 
-/* Form section */
-.form-main-div {
-    height: 35vh;
-    background-color: white;
+/* Form */
+.form {
+  background-color: white;
+  padding: 40px;
+  /* border-radius: 10px; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
 }
 
 .form-title {
-    margin-top: 15px;
-    margin-left: 5%;
-    margin-bottom: 15px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 
-.second {
-    display: flex;
-    font-family: sans-serif;
-    margin-left: 5%;
-    gap: 70px;
+.form-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.form-div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
 }
 
 input {
-    width: 300px;
-    height: 30px;
-    border: 2px solid #e5e7eb;
-    border-radius: 7px;
+  width: 250px;
+  height: 35px;
+  padding: 6px 10px;
+  border: 2px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 input:focus {
-    border: 2px solid blue;
+  border-color: #555;
+  outline: none;
 }
 
 input:invalid {
-    border: 2px solid red;
+  border-color: #ef4444;
 }
 
-label {
-    color: #585858;
-    font-size: 13px;
-    font-weight: bold;
+/* Error text */
+.error {
+  font-size: 0.7rem;
+  color: red;
+  margin-top: -10px;
 }
 
-#error {
-    color: red;
-    font-size: 10px;
-    margin: 4px;
+/* Form actions */
+.form-actions {
+  margin-top: 30px;
+  margin-left: 40px;
 }
 
 .btn-green {
-    background-color: #596d48;
-    color: white;
-    border: 1px solid #596d48;
-    border-radius: 7px;
-    height: 50px;
-    width: 175px;
-    margin-top: 3%;
-    margin-left: 5%;
-    font-size: 17px;
+  background-color: #596d48;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.third {
-    height: 30vh;
-    background-color: #fafafa;
+.btn-green:hover {
+  background-color: #45573a;
+}
+
+/* Login link */
+.login-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  margin-left: 40px;
+}
+
+.login-link a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: bold;
 }
